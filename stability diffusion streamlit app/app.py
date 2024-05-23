@@ -1,25 +1,36 @@
+
 import streamlit as st
-# Add a title to your app
-st.title('My Streamlit App')
-
-# Add some text
-st.write('Welcome to my first Streamlit app!')
-
-# Add a slider widget
-age = st.slider('Select your age', 0, 100, 25)
-
-# Display a chart
-import pandas as pd
+from diffusers import DiffusionPipeline
+import torch
+from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
+from PIL import Image
+# Function to generate image based on prompt
+def generate_image(prompt):
+    pipe = DiffusionPipeline.from_pretrained("stabilityai/stable-diffusion-xl-base-1.0", torch_dtype=torch.float16, use_safetensors=True, variant="fp16")
+    pipe.to("cuda")
+    # In a real scenario, this function would call your image generation model
+    # and return the generated image.
+    # For this example, let's just return a placeholder image.
+    images = pipe(prompt=prompt).images[0]
+    return images
 
-# Generate some example data
-df = pd.DataFrame({
-    'x': np.random.randn(100),
-    'y': np.random.randn(100)
-})
+# Streamlit UI
+def main():
+    
+    st.title("Image Generator")
 
-# Plot the data
-fig, ax = plt.subplots()
-ax.scatter(df['x'], df['y'])
-st.pyplot(fig) 
+    # User prompt input
+    prompt = st.text_input("Enter your prompt:", "A beautiful landscape with mountains")
+
+    # Generate image button
+    if st.button("Generate Image"):
+        # Generate the image based on the prompt
+        image = generate_image(prompt)
+        
+        # Display the generated image
+        st.image(image, caption='Generated Image', use_column_width=True)
+
+if __name__ == "__main__":
+    main()
