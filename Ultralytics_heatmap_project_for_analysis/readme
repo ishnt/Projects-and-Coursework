@@ -1,0 +1,13 @@
+Here's the posted Linkedin Link for the results and you can also run speed_estimation.avi in the repo.
+https://www.linkedin.com/posts/ishant-manderwal-007266217_exploring-the-science-of-badminton-player-activity-7195332901104726016-SNq2?utm_source=share&utm_medium=member_desktop
+Steps to run locally on your System:-
+1.Use this command to install all the required libraries in your environment
+  pip install -r requirements.txt
+2.Change the path to your video
+3.You can also change the weights given to the model for the heatmap creation if you created .pt file by training the model on a specific usecase(by default it is set on yolov8n.pt)
+4.Run the main.py file 
+It will generate a result file with heatmap video file.
+*********************************************************************************************************************************************************
+NOTE
+I was not able to upload the video on the github due to its big size.Github dont allow files bigger than 25MB.
+
