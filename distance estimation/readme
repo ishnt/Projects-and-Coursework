@@ -1,0 +1,13 @@
+Here's the posted Linkedin Link for the results and you can also run on your own video by changing the path variable. 
+https://www.linkedin.com/posts/ishant-manderwal-007266217_visioneye-activity-7194591158541430788-9Aaq?utm_source=share&utm_medium=member_desktop
+Steps to run locally on your System:-
+1.Use this command to install all the required libraries in your environment
+  pip install -r requirements.txt
+2.Change the path to your video.
+3.You can also change the weights given to the model for the estimation if you created .pt file by training the model on a specific usecase(by default it is set on yolov8n.pt)
+4.Run the main.py file 
+It will generate a distance calculation video which marks under 30m person from the centroid as threat.
+
+*********************************************************************************************************************************************************
+NOTE
+I was not able to upload the video on the github due to its big size.Github dont allow files bigger than 25MB.
