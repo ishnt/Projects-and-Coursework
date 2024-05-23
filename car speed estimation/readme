@@ -1,7 +1,9 @@
 Here's the posted Linkedin Link for the results and you can also run speed_estimation.avi in the repo.
 https://www.linkedin.com/posts/ishant-manderwal-007266217_ai-automotive-yolov8-activity-7194058901615439872-HY0b?utm_source=share&utm_medium=member_desktop
 Steps to run locally on your System:-
-1.
-2.
-3.
+1.Use this command to install all the required libraries in your environment
+  pip install -r requirements.txt
+2.Change the path to your video(by default it is set to car moving.mp4)
+3.Run the main.py file 
+It will generate a speed estimated video file (just like speed_estimation.avi)
 
