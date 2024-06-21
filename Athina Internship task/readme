@@ -1,0 +1,8 @@
+export GROQ_API_KEY=72c738f8-0dd0-4c1d-b550-876aa044bdeb
+Make sure to install all the required libraries mentioned in the requirements.txt
+pip install -r requirements.txt
+1. You have to set the groq api key in the environment for the use of the llama 3 llm model
+2. You have to install ollama in your system to locally run the llama 3 model and convert our data into embeddings.
+3. Run the streamlit Application by running 
+   streamlit run main.py  
+
